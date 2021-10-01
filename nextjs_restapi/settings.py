@@ -25,7 +25,7 @@ BASE_DIR = Path(__file__).resolve(strict=True).parent.parent
 SECRET_KEY = config('SECRET_KEY')
 DEBUG = config('DEBUG')
 
-ALLOWED_HOSTS = ['nextjs-api-by-django.herokuapp.com']
+ALLOWED_HOSTS = ['nextjs-restapi-by-django.herokuapp.com/']
 
 # Application definition
 
