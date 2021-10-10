@@ -25,7 +25,10 @@ BASE_DIR = Path(__file__).resolve(strict=True).parent.parent
 SECRET_KEY = config('SECRET_KEY')
 DEBUG = config('DEBUG')
 
-ALLOWED_HOSTS = ['nextjs-restapi-by-django.herokuapp.com']
+ALLOWED_HOSTS = [
+    'nextjs-restapi-by-django.herokuapp.com',
+    '127.0.0.1',
+]
 
 # Application definition
 
@@ -37,7 +40,9 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
+
     'api.apps.ApiConfig',
+    'polls.apps.PollsConfig',
     'corsheaders',
     'djoser',
 ]
@@ -74,7 +79,7 @@ ROOT_URLCONF = 'nextjs_restapi.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [BASE_DIR / 'templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
