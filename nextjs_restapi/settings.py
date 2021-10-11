@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rest_framework',
 
+    'training.apps.TrainingConfig',
     'api.apps.ApiConfig',
     'polls.apps.PollsConfig',
     'corsheaders',
